@@ -1,29 +1,31 @@
 <script>
   import Home from './Home.svelte'
-  import { ChordBox } from 'vexchords'
+  import Practice from './Practice.svelte'
 
   let showHome = true
   let chosenChords = []
-  $: console.log(chosenChords)
+
   function addChords(event) {
     if (event.target.tagName === 'BUTTON') {
       chosenChords = [...chosenChords, event.target.innerText]
     }
   }
 </script>
+
 <style>
+
 </style>
 
 <header>
   {#if showHome}
     <h1>GuitBetter</h1>
     <Home
-      start={() => { showHome = false }}
-      chosenChords={chosenChords}
-      addChords={addChords}
-    />
+      start={() => {
+        showHome = false
+      }}
+      {chosenChords}
+      {addChords} />
   {:else}
-    <div>Chosen Chords YO! Let's start</div>
-    <div>{chosenChords.join(', ')}</div>
+    <Practice {chosenChords} />
   {/if}
 </header>

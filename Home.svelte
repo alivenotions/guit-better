@@ -3,11 +3,12 @@
   export let chosenChords
   export let addChords
 </script>
+
 <div id="front">
   <section id="chords" on:click={addChords}>
     <h2>Chords</h2>
     <div id="a-chords">
-      <button >A major</button>
+      <button>A major</button>
       <button>A minor</button>
       <button>A 7</button>
     </div>
