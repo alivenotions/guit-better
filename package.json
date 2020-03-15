@@ -20,7 +20,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier --write"
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier --write"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.1.1",
